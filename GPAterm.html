@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="scg.png">
+    <link href="styleGPAX.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
+    <title>GPA รายเทอม - SmartCalGPAX</title>
+</head>
+<body>
+    <div class="my-navbar">
+        <div class="navbar-title">GPA รายเทอม - SmartCalGPAX</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> <!--ขีดเมนูเท็บ-->
+        <div class="my-navbar-buttons">
+            <a href="GPAX.html">GPAX</a>
+            <a href="GPAterm.html">GPA รายเทอม</a>
+            <a href="GPAsub.html">GPA รายวิชา</a>
+            <a href="goal.html">คำนวณเป้าหมาย</a>
+            <a href="advice.html">คำแนะนำ</a>
+        </div>
+    </div>
+    <div class="content">
+        <div>
+            <h1>คำนวณเกรดเฉลี่ยใน 1 เทอม</h1>
+            <div id="input-container">
+                <div class="input-group">
+                    <span>1</span>
+                    <input type="text" placeholder="ใส่ชื่อวิชา (ไม่จำเป็น)">
+                    <input type="number" class="value1" placeholder="ใส่หน่วยกิต" step="0.5" min="0.5" max="5">
+                    <input type="number" class="value2" placeholder="ใส่เกรด" step="0.5" min="0" max="4">
+                    <button type="button" class="remove" onclick="removeInput(this)">-</button>
+                </div>
+            </div>
+            <button type="button" id="calculate-button">คำนวณ</button>
+            <button type="button" id="add-button">+</button>
+            <p id="message" class="warning">โปรดกรอกข้อมูลให้ครบถ้วน</p>
+            <p id="limit-message" class="warning">คุณไม่สามารถคำนวณได้มากกว่า 6 เทอม</p>
+        </div>
+
+        <div id="popup-overlay"></div>
+        <div id="popup">
+            <p id="popup-message"></p>
+            <button onclick="closePopup()">ตกลง</button>
+        </div>
+    </div>
+
+    <script src="GPAterm.js"></script>
+    <script src="navbar.js"></script>
+</body>
+</html>

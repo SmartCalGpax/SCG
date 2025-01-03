@@ -1,0 +1,101 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+/* สไตล์แถบด้านบน */
+.my-navbar {
+    background-color: #4a3267;
+    color: white;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* ทำให้แถบคงที่ */
+    top: 0; /* ติดอยู่ด้านบนของหน้าจอ */
+    left: 0;
+    width: 100%; /* ให้แถบครอบคลุมความกว้างทั้งหมด */
+    z-index: 1000; /* ทำให้แถบอยู่เหนือเนื้อหาอื่น */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.navbar-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+/* ปุ่มในแถบ */
+.my-navbar-buttons {
+    display: flex;
+    gap: 35px;
+}
+  
+.my-navbar-buttons a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+.my-navbar-buttons a:hover {
+    text-decoration: underline;
+    color: #de638a;
+}
+  
+/* เนื้อหา */
+.content {
+    margin-top: 125px; /* เพิ่มระยะให้เนื้อหาไม่ซ้อนกับ Navbar */
+    padding: 20px;
+}
+
+/* ลิ้นชักเมนูสำหรับหน้าจอขนาดเล็ก */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+}
+
+.my-navbar-buttons {
+    flex-direction: row;
+}
+
+@media (max-width: 975px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .my-navbar-buttons {
+        display: none;
+        flex-direction: column;
+        background-color: #4a3267;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .my-navbar-buttons a {
+        padding: 10px;
+        border-bottom: 1px solid #5a4377;
+    }
+
+    .my-navbar-buttons a:last-child {
+        border-bottom: none;
+    }
+
+    .my-navbar-buttons.show {
+        display: flex;
+    }
+}

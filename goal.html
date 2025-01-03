@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำนวณเป้าหมาย - SmartCalGPAX</title>
+    <link rel="icon" type="image/png" href="scg.png">
+    <link rel="stylesheet" href="goal.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div class="my-navbar">
+        <div class="navbar-title">คำนวณเป้าหมาย - SmartCalGPAX</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> <!--ขีดเมนูเท็บ-->
+        <div class="my-navbar-buttons">
+            <a href="GPAX.html">GPAX</a>
+            <a href="GPAterm.html">GPA รายเทอม</a>
+            <a href="GPAsub.html">GPA รายวิชา</a>
+            <a href="goal.html">คำนวณเป้าหมาย</a>
+            <a href="advice.html">คำแนะนำ</a>
+        </div>
+    </div>
+    <div class="content">
+    <div>
+        <div class="header-input-group">
+            <h1>เกรดที่คุณอยากทำให้ได้คือ</h1>
+            <input 
+                type="number" 
+                id="header-input" 
+                placeholder="ใส่เกรด" 
+                step="0.01" 
+                min="1.00" 
+                max="4.00">
+        </div>
+        <p class="description">การคำนวณนี้เพื่อการหาเป้าหมายว่าในอีก 1 (หรือตามช่องที่เว้นไว้ + 1) เทอมที่เหลือจะต้องทำเกรดเท่าไหร่เพื่อให้ได้เกรดเฉลี่ย 5 เทอมตามเป้าหมายที่ตั้งไว้</p>
+        
+        <div id="input-container">
+            <!-- Fixed 4 rows -->
+            <div class="input-group">
+                <span>1</span>
+                <input type="number" class="value1" placeholder="เกรดเทอม 1">
+            </div>
+            <div class="input-group">
+                <span>2</span>
+                <input type="number" class="value1" placeholder="เกรดเทอม 2">
+            </div>
+            <div class="input-group">
+                <span>3</span>
+                <input type="number" class="value1" placeholder="เกรดเทอม 3">
+            </div>
+            <div class="input-group">
+                <span>4</span>
+                <input type="number" class="value1" placeholder="เกรดเทอม 4">
+            </div>
+        </div>
+        <button type="button" id="calculate-button">คำนวณ</button>
+        <p id="header-warning" class="warning">โปรดใส่เป้าหมาย และตั้งเป้าหมายได้ระหว่าง 1.00 ถึง 4.00 เท่านั้น</p>
+        <p id="message" class="warning">โปรดใส่เกรดอย่างน้อย 1 เทอม</p>
+    </div>
+
+    <div id="popup-overlay"></div>
+    <div id="popup">
+        <p id="popup-message"></p>
+        <button onclick="closePopup()">ตกลง</button>
+    </div>
+    </div>
+
+    <script src="goal.js"></script>
+    <script src="navbar.js"></script>
+</body>
+</html>

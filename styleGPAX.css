@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #F3D9E5;
+    text-align: center;
+    
+}
+
+.input-group {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group span {
+    margin-right: 25px;
+    width: 25px;
+    text-align: right;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #4a3267;
+}
+
+.input-group input {
+    margin-right: 5px;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 1.9px solid #de638e;
+    padding: 3.5px;
+    text-align: center;
+    line-height: normal;
+}
+
+.input-group button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.input-group button.remove {
+    color: white;
+    background-color: rgb(108, 33, 33);
+}
+.input-group button.remove:hover {
+    background-color: darkred;
+}
+#add-button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(7, 125, 7);
+}
+#add-button:hover {
+    background-color: darkgreen;
+}
+#calculate-button {
+    margin-top: 10px;
+    color: white;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    background-color: #4a3267;
+    transition: ease 0.3s;
+}
+#calculate-button:hover {
+    background-color: #2e1f3f;
+    transform: scale(1.1);
+}
+
+.warning {
+    color: red;
+    display: none;
+    margin-top: 10px;
+}
+
+#popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    text-align: center;
+}
+
+#popup button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a3267;
+    color: white;
+    cursor: pointer;
+}
+#popup button:hover {
+    background-color: #7950ab;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #4a3267;
+}
+
+@media screen and (max-width: 500px) 
+{
+  h1 {
+    font-size: 25px;
+  }
+  .input-group span {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  .input-group input {
+    margin-right: 2px;
+    width: 95px;
+    height: 40px;
+    font-size: 15px;
+    padding: 3.5px;
+  }
+  .input-group button {
+    margin-left: 0px;
+  }
+}
